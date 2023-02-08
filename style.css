@@ -59,3 +59,7 @@ h3 {
   margin-top: 20px;
   cursor: pointer;
 }
+
+.game-over {
+  background-color: black;
+}

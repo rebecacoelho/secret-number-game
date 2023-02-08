@@ -1,6 +1,17 @@
 function verifyGuessIsValid(guess) {
   const number = +guess
 
+  if (guess.toUpperCase() === "GAME OVER") {
+    document.body.innerHTML = `
+    <div class="game-over">
+      <h2>Game Over!!!</h2>
+      <h3>O número secreto era ${secretNumber}</h3>
+      <h3>Pressione o botão para jogar novamente</h3>
+
+      <button id="play-again" class="btn-play">Jogar novamente</button>
+    </div>`
+  }
+
   if (guessInvalid(number)) {
     elementGuess.innerHTML += '<div>Valor inválido</div>'
     return
